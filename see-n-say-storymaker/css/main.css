@@ -1,18 +1,69 @@
-body {
+/* Document */
+:root {
+    --primary-color: #6f42c1; /* cor principal */
+    --primary-hover-color: #5e35b1; /* cor principal ao passar o mouse */
+    --background-color: #aa00ff; /* roxo vibrante para o fundo */
+    --button-width: 200px; /* largura dos botões */
+    --button-height: 50px; /* altura dos botões */
+    --button-margin: 10px; /* margem dos botões */
+  }
+  
+  body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
+    background-color: var(--background-color); /* cor de fundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Botões */
+  button {
+    font-family: inherit;
+    font-size: 1.2em;
+    width: var(--button-width); /* largura dos botões */
+    height: var(--button-height); /* altura dos botões */
+    margin: var(--button-margin); /* margem dos botões */
+    padding: 15px 30px; /* preenchimento dos botões */
+    background-color: var(--primary-color); /* cor de fundo dos botões */
+    color: #fff; /* cor do texto */
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-#story {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-}
+    transition: background-color 0.3s ease; /* suaviza a transição da cor de fundo */
+  }
+  
+  button:hover {
+    background-color: var(--primary-hover-color); /* cor de fundo dos botões ao passar o mouse */
+  }
+  
+  /* História */
+  #story {
+    margin-top: 20px; /* margem superior para separar dos botões */
+    padding: 20px;
+    background-color: #fff; /* cor de fundo da caixa de história */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra para efeito de elevação */
+    max-width: 600px; /* largura máxima da caixa de história */
+    text-align: center; /* centraliza o texto */
+    font-size: 1.2em; /* tamanho da fonte */
+  }
+  
+  /* Ações */
+  #controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #resetButton {
+    margin-top: 30px; /* margem superior para separar do restante dos botões */
+    background-color: #dc3545; /* cor de fundo do botão de reset */
+  }
+  
+  #randomStoryButton {
+    background-color: #28a745; /* cor de fundo do botão de história aleatória */
+  }
+  
